@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#1a2a6c">
+    <meta name="description" content="可爱的腊肠狗吃鱼油游戏">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>腊肠狗吃鱼油</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 添加网站图标 -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,${encodeURIComponent(`
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="48" fill="#8B4513"/>
+            <ellipse cx="50" cy="60" rx="25" ry="15" fill="#654321"/>
+            <circle cx="35" cy="45" r="8" fill="white"/>
+            <circle cx="65" cy="45" r="8" fill="white"/>
+            <circle cx="35" cy="45" r="4" fill="black"/>
+            <circle cx="65" cy="45" r="4" fill="black"/>
+            <ellipse cx="50" cy="70" rx="10" ry="5" fill="black"/>
+        </svg>
+    `)}">
+    <!-- 添加启动画面图标 -->
+    <link rel="apple-touch-icon" href="data:image/svg+xml,${encodeURIComponent(`
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="48" fill="#8B4513"/>
+            <ellipse cx="50" cy="60" rx="25" ry="15" fill="#654321"/>
+            <circle cx="35" cy="45" r="8" fill="white"/>
+            <circle cx="65" cy="45" r="8" fill="white"/>
+            <circle cx="35" cy="45" r="4" fill="black"/>
+            <circle cx="65" cy="45" r="4" fill="black"/>
+            <ellipse cx="50" cy="70" rx="10" ry="5" fill="black"/>
+        </svg>
+    `)}">
+    <!-- 添加启动画面 -->
+    <link rel="apple-touch-startup-image" href="data:image/svg+xml,${encodeURIComponent(`
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="48" fill="#8B4513"/>
+            <ellipse cx="50" cy="60" rx="25" ry="15" fill="#654321"/>
+            <circle cx="35" cy="45" r="8" fill="white"/>
+            <circle cx="65" cy="45" r="8" fill="white"/>
+            <circle cx="35" cy="45" r="4" fill="black"/>
+            <circle cx="65" cy="45" r="4" fill="black"/>
+            <ellipse cx="50" cy="70" rx="10" ry="5" fill="black"/>
+        </svg>
+    `)}">
+    <!-- 添加分享信息 -->
+    <meta property="og:title" content="腊肠狗吃鱼油">
+    <meta property="og:description" content="来和可爱的腊肠狗一起吃鱼油吧！">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <div class="game-container">
+        <div class="score">得分：<span id="scoreText">0</span></div>
+        <canvas id="gameCanvas"></canvas>
+        <div class="monkey-container">
+            <div id="monkey" class="monkey hidden">
+                <div class="monkey-body"></div>
+                <div class="monkey-face">
+                    <div class="monkey-eyes"></div>
+                    <div class="monkey-nose"></div>
+                    <div class="monkey-mouth"></div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="startButton">开始游戏</button>
+            <button id="pauseButton">暂停</button>
+        </div>
+        <div class="audio-upload">
+            <label for="audioUpload" class="custom-file-upload">
+                上传语音提示（2秒内）
+            </label>
+            <input type="file" id="audioUpload" accept="audio/*" style="display: none;">
+            <div id="audioStatus">当前未设置语音</div>
+        </div>
+        <div class="game-message" id="gameMessage">
+            点击屏幕开始游戏
+        </div>
+        <div class="mobile-controls">
+            <div id="joystick-container">
+                <div id="joystick-base">
+                    <div id="joystick-thumb"></div>
+                </div>
+            </div>
+        </div>
+        <div class="share-tip">
+            添加到主屏幕，体验更佳
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html> 
